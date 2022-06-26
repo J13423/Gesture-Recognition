@@ -1,0 +1,52 @@
+<!--https://teachablemachine.withgoogle.com/models/1iqjzYJBg/-->
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Hand Gesture Recogition</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+    <body style="font-family: 'Raleway', sans-serif; background: #c0d3ff; color: white;">
+      <center>
+        <h1 class="btn btn-info">Hand Gesture Recogition</h2>
+        <br>
+        <hr>
+        <Br>
+        <div id="header" class="col-md-10 col-sm-12 col-xs-12" style="left: 8.5vw; border:5px, solid, white; border-radius:1rem; ">
+          <label>Ok</label>
+          <label>Thumb up</label>
+          <label>Thumb down</label>
+          <label>Yay!</label>
+        </div> 
+        <br>
+        <hr>
+        <br>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Camera View - </label>
+          <div id="camera"></div>
+        <button onclick="snapShot();" class="btn btn-default">Snapshot</button>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Predction 1</label>
+          <p class="gestureName" id="resultGestureName1"></p>
+          <p class="gesture" id="updateGesture"></p>
+          <label>Predction 2</label>
+          <p class="gestureName" id="resultGestureName2"></p>
+          <p class="gesture" id="updateGesture1"></p>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Snapshot - </label>
+        <br>
+        <div id="result"></div>
+        <button onclick="predict();" class="btn btn-default">Prediction</button>
+      </div>
+      </center>
+  <script src="main.js"></script>
+    </body>
+  </html>
